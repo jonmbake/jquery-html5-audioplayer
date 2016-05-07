@@ -7,8 +7,8 @@ An HTML5 audio player with keyboard shortcut controls. Inspired by [BUILDING A C
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/jonmbake/jquery-html5-audioplayer/master/dist/audio-player.min.js
-[max]: https://raw.github.com/jonmbake/jquery-html5-audioplayer/master/dist/audio-player.js
+[min]: https://github.com/jonmbake/jquery-html5-audioplayer/blob/master/dist/jquery.audio-player.min.js
+[max]: https://github.com/jonmbake/jquery-html5-audioplayer/blob/master/dist/jquery.audio-player.js
 
 In your web page:
 
