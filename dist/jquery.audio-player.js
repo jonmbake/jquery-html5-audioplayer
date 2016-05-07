@@ -1,5 +1,5 @@
 /*! Audio Player - v0.1.0 - 2016-05-07
-* https://github.com/jonmbake/jquery-audio-player
+* https://github.com/jonmbake/jquery-html5-audioplayer
 * Copyright (c) 2016 Jon Bake; Licensed MIT */
 /**
  * To do: 
@@ -22,7 +22,7 @@
    */
   var defaultOptions = {
     skipAmountSeconds: 15,
-    audioSrcUrl: 'http://traffic.libsyn.com/timferriss/Tim_Ferriss_Show_-_Mike_Rowe.mp3',
+    audioSrcUrl: '',
     shortcuts: {
       playPause: 'Alt+P',
       rewind: 'Alt+B',

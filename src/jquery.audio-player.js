@@ -27,7 +27,7 @@
    */
   var defaultOptions = {
     skipAmountSeconds: 15,
-    audioSrcUrl: 'http://traffic.libsyn.com/timferriss/Tim_Ferriss_Show_-_Mike_Rowe.mp3',
+    audioSrcUrl: '',
     shortcuts: {
       playPause: 'Alt+P',
       rewind: 'Alt+B',
