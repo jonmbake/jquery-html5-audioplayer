@@ -1,0 +1,26 @@
+{
+  "name": "audio-player",
+  "title": "Audio Player",
+  "description": "An HTML5 audio player with keyboard shortcuts on controls.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonmbake/jquery-audio-player",
+  "author": {
+    "name": "Jon Bake",
+    "email": "jonmbake@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonmbake/jquery-audio-player.git"
+  },
+  "bugs": "https://github.com/jonmbake/jquery-audio-player/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonmbake/jquery-audio-player/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

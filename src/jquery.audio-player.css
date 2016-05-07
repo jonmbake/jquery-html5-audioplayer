@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.eot?v=4.6.1');
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.woff2?v=4.6.1') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.woff?v=4.6.1') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/fonts/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.btn {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 70px;
+    cursor: pointer;
+}
+
+.fa-play:before {
+    font-size: 1.5em;
+    color: #0F5738;
+    content: "\f04b";
+}
+
+.fa-pause:before {
+    font-size: 1.5em;
+    color: #0F5738;
+    content: "\f04c";
+}
+
+.fa-fast-backward:before {
+    font-size: 1.5em;
+    color: #1A1A59;
+    content: "\f049";
+}
+
+.fa-fast-forward:before {
+    font-size: 1.5em;
+    color: #1A1A59;
+    content: "\f050";
+}
+
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+    font-size: 1.5em;
+    color: #553100;
+    content: "\f103";
+}
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+    font-size: 1.5em;
+
+    color: #553100;
+    content: "\f102";
+}
+
+.player-wrapper {
+    width: 505px;
+    margin: 50px auto auto auto;
+}
+
+.player {
+    background-color: #f8f8f8;
+    padding: 20px;
+    height: 60px;
+    border: solid;
+    border-radius: 6px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.timeline {
+    width: 380px;
+    height: 20px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 15px;
+    background: rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+.playhead{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 1px;
+    background: black;
+}
+
+.reading {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+}

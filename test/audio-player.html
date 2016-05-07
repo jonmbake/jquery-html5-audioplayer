@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Audio Player Test Suite</title>
+  <!-- Polyfills - Version 1.X of Phantom does not have Function.prototype.bind or HTMLElement.prototype.click -->
+  <script>
+  if (!Function.prototype.bind) {
+    Function.prototype.bind = function(oThis) {
+      if (typeof this !== 'function') {
+        // closest thing possible to the ECMAScript 5
+        // internal IsCallable function
+        throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      }
+
+      var aArgs   = Array.prototype.slice.call(arguments, 1),
+          fToBind = this,
+          fNOP    = function() {},
+          fBound  = function() {
+            return fToBind.apply(this instanceof fNOP
+                   ? this
+                   : oThis,
+                   aArgs.concat(Array.prototype.slice.call(arguments)));
+          };
+
+      if (this.prototype) {
+        // native functions don't have a prototype
+        fNOP.prototype = this.prototype; 
+      }
+      fBound.prototype = new fNOP();
+
+      return fBound;
+    };
+  }
+  if (!HTMLElement.prototype.click) {
+    HTMLElement.prototype.click = function() {
+      var ev = document.createEvent('MouseEvent');
+      ev.initMouseEvent(
+          'click',
+          /*bubble*/true, /*cancelable*/true,
+          window, null,
+          0, 0, 0, 0, /*coordinates*/
+          false, false, false, false, /*modifier keys*/
+          0/*button=left*/, null
+      );
+      this.dispatchEvent(ev);
+    };
+  }
+  </script>
+  <!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+  <script src="../libs/jquery-loader.js"></script>
+  <!-- Load local QUnit. -->
+  <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
+  <script src="../libs/qunit/qunit.js"></script>
+  <!-- Load local lib and tests. -->
+  <script src="../src/jquery.audio-player.js"></script>
+  <script src="audio-player_test.js"></script>
+  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
+       you REALLY want to mess around with jQuery in the console. REMEMBER WE
+       ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
+  <script>window._$ = jQuery.noConflict(true);</script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="audio-player">
+  </div>
+</body>
+</html>
